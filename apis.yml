@@ -1,7 +1,28 @@
 aid: gimme-media
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gimme-media.png
 name: Gimme Media
-description: Gimme Media is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Gimme Media is the Techstars-backed music company behind Gimme Radio, the
+  heavy-metal streaming and live-DJ radio platform that later expanded into
+  Gimme Metal and Gimme Country. The standalone streaming apps were wound down,
+  and the brand now operates as a Shopify-hosted storefront at gimmemetal.com
+  selling vinyl, merchandise, and exclusive releases to the metal community.
+  As of this enrichment pass Gimme Media publishes no first-party public
+  developer API, SDKs, OpenAPI definition, or developer documentation; the only
+  machine-readable surfaces served at its domain are the Shopify Customer
+  Accounts platform OIDC endpoints, which belong to the hosting platform rather
+  than to a Gimme Media API.
 url: https://raw.githubusercontent.com/api-evangelist/gimme-media/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,11 +30,18 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: streaming-service-wound-down; now a Shopify merch storefront; no public API
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Music
+- Streaming
+- Media
+- Radio
+- Metal
+- Ecommerce
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +49,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/gimme-media-domain-security.yml
 - type: Website
-  url: https://gimmeradio.com/
+  url: https://gimmemetal.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

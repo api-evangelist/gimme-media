@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+host: https://gimmemetal.com
+note: >-
+  gimmeradio.com now redirects to gimmemetal.com, a Shopify-hosted merch/vinyl
+  storefront. The openid-configuration and oauth-authorization-server documents
+  that resolve here are Shopify Customer Accounts platform endpoints
+  (issuer: https://shopify.com/authentication/21515265, customer-account scopes),
+  NOT a first-party Gimme Media developer API. Recorded as honest probe data only;
+  no first-party API discovery surface exists. No WellKnown rating pointer is
+  wired because these documents belong to the Shopify hosting platform.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 200
+  file: gimme-media-openid-configuration.json
+  belongs_to: shopify-customer-accounts
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  file: gimme-media-oauth-authorization-server.json
+  belongs_to: shopify-customer-accounts
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
